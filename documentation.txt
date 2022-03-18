@@ -1,0 +1,203 @@
+//  Javascript Full Documantaion 
+==>
+
+
+===>Variables{
+
+    -var 
+    -let
+    -const
+    -variable scope(hoisting and declaration)
+    -reasigning
+
+}
+
+
+===>Data Types{
+
+    >String{
+        concatenation
+        length
+        concat
+        uppercase
+        lowercase
+        indexOf
+        includes
+        substring
+        slice
+        split
+        replace
+        repeat
+        }
+
+    >Number{
+        arthimetic
+        string number
+        infinity
+        toString()
+        tofixed()
+        toPrecesion()
+        parsFloat()
+        parsInt()
+        Number()
+        }
+
+    >Array{
+        unshift
+        push
+        splice
+        shift
+        pop
+        splice
+        indexOf
+        lastIndexOf
+        includes
+        finding Primitevs
+        finding Refrence
+        arrow function
+        splice
+        concat
+        slice
+        slice
+        spread operators
+        for of/each (iterating)
+        join
+        split
+        sort
+        reverse
+        filter
+        map
+        reduce
+        }
+
+    >Object{
+        factory function
+        constructor function
+        dynamic add or delete
+        for in(emurating)
+        assign
+        Math objects
+        Date objects
+       template literals
+
+        }
+
+    >Function{
+        declaration
+        arguments
+        expression
+        arrow function
+        rest operators
+        default parametrs
+        getter and setter
+        try and catch
+        const and let (function)
+        this keyword
+        }
+
+    -boolean
+    -Date()
+    -symbol
+    -undifined
+    -null
+
+}
+
+
+===>Operators{
+
+    -arithmetic 
+    -assignment
+    -comparison
+    -logical
+    -conditional
+    -precedence 
+    -swapping Variable
+
+}
+
+
+===>loops and conditional{
+
+    -if else
+    -if in
+    -switch
+    -for
+    -for in
+    -for of
+    -for each
+    -map
+    -while
+    -do while
+
+}
+
+
+===>DOM{
+
+    -console elements
+    -select element by query selector
+    -select element by id 
+    -diffrences between query & id
+    -traversing from parent to childeren
+    -traversing from childeren to parent
+    -create html tag 
+    -replace html tag
+    -remove html tag
+
+    >Classes Attributes{
+        .classList
+        .className
+        classList.add()
+        classList.remove()
+    }
+
+    >Ids Attributes{
+        .id
+        .id = 'link'
+        .id = ''
+    }
+
+    >Attribute Function{
+        .getAttribute
+        .setAttribute
+        .hasAttribute
+    }
+
+}
+
+
+===>Event Listeners{
+
+    -parametrs
+    -mouse events
+    -keyboard events
+    -event bubbling
+    -delegation & stopPropagation
+
+}
+
+
+===>Local Storage{
+
+    -setItem
+    -removeItem
+    -getItem
+    -clear()
+    -stringify()
+    -parse()
+
+}
+
+
+===>OOP{
+
+    -object literals
+    -object constructor
+    -default constructor
+    -prototype
+    -inheritating in oop
+    -Es6 class(with inheritating)
+
+}
+

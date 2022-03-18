@@ -543,7 +543,6 @@
     //Select Element by getElement
         const logo = document.getElementById("logo")
         const heading  =  document.getElementById("heading")
-        const
         const headingInner = heading.innerHTML
         heading.classList = "headingClass"
         heading.style.backgroundColor = "black"
@@ -555,9 +554,6 @@
         console.log(heading);
         console.log(logo);
         console.log(headingQuery);
-  sjdflasdf
-  sdkfjasdfa
-  sfsadfsad
-  f
+
         
          

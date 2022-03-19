@@ -540,20 +540,174 @@
 
 //DOM
         
-    //Select Element by getElement
+    //Select Element by getElement by ID
         const logo = document.getElementById("logo")
         const heading  =  document.getElementById("heading")
+        const shoppingCart = document.getElementById("shopping-cart")
         const headingInner = heading.innerHTML
-        heading.classList = "headingClass"
-        heading.style.backgroundColor = "black"
-        heading.style.fontSize = "80px"
-        heading.style.color = "white"
-        heading.style.borderRadius = "20px"
-        const headingQuery = document.querySelector(".headingClass")
+        // heading.classList = "headingClass"
+        // heading.style.backgroundColor = "black"
+        // heading.style.fontSize = "80px"
+        // heading.style.color = "white"
+        // heading.style.borderRadius = "20px"
+     //Select Element by getElement by Class Name
+        const cards = document.getElementsByClassName("card")
+        const infoCard = document.getElementsByClassName("info-card")
+        const row = document.getElementsByClassName("row")
+     //Select Element by getElement by Tag Name
+        const h1 = document.getElementsByTagName("h1")
+        const div = document.getElementsByTagName("div")
+        const img = document.getElementsByTagName("img")
+     //Select Element by getElement by query selector
+        const headingQuery = document.querySelector("#heading")
+        const cardQuery = document.querySelector(".card")
+        const h1Query = document.querySelector("h1")
+    //select Element by getElement by query selector All
+        const cardsQuery = document.querySelectorAll(".card")
+        const infoCardQuery = document.querySelectorAll(".info-card")
+        const rowQuery = document.querySelector(".row")
+    //difference between getElements  and  querySelectorAll
+        const six = document.getElementsByClassName("six")  // Html Collection
+        const link = document.getElementsByClassName("link")  // Html Collection
+        //       six.forEach(element => {
+        //        console.log(element);
+        //    });
+        // console.log(six);
         
-        console.log(heading);
-        console.log(logo);
-        console.log(headingQuery);
+        const sixQ = document.querySelectorAll(".six")   // NodeList
+        const linkQ = document.querySelectorAll(".link")   // NodeList
+        // sixQ.forEach(element => {
+            // element.remove() 
+            // }); 
+            // console.log(linkQ);
+        let links = document.querySelectorAll("#primary > .link ")
+        let rowAll = document.querySelectorAll("#courses-list > .row")
+        
 
+
+    //Traversing from Parent to children 
+        let primary = document.querySelector("#primary")
+        let primaryChildNodes = document.querySelector("#primary").childNodes
+        let primaryChildren = document.querySelector("#primary").children
+        // console.log(primaryChildren);
+        let secondary = document.querySelector("#secondary")
+        let secondaryChildNodes = document.querySelector("#secondary").childNodes
+        let secondaryChildren = document.querySelector("#secondary").children
+        // console.log(secondaryChildren);
+        let footer = document.querySelector("#footer").children
+        let header = document.querySelector("#header").children
+        let price = document.querySelector(".price").children[0]
+        let cardChildren = document.querySelector(".card").children[1].children[2].src
+        // console.log(cardChildren);  
+        let textNodeChild = document.querySelector("#header").firstChild
+        // console.log(textNodeChild);
+        let th = document.querySelector("#header").firstElementChild.firstElementChild.children[1]
+        th = th.firstElementChild.firstElementChild.children[1].firstElementChild.firstElementChild.firstElementChild.children[2]
+        // console.log(th);
+        let input = document.querySelector("#hero").firstElementChild.firstElementChild.firstElementChild
+        input = input.firstElementChild.children[2].firstElementChild.setAttribute("placeholder","چی میخای یادبگیری ؟!")
+        let paragraph = document.querySelector("#courses-list").children[1].firstElementChild.firstElementChild
+        paragraph = paragraph.children[1].children[1].innerHTML = "محمدرضا حاجی مقصودی !!"   
+        // console.log(paragraph);
+
+    // Traversing from children to Parent 
+        let coursesList = document.querySelector(".price").parentElement.parentElement.parentElement
+        coursesList = coursesList.parentElement.parentElement
+        // console.log(coursesList);             
+        let coursesListNode = document.querySelector(".card").parentNode.parentNode.parentNode
+        // console.log(coursesListNode);
+
+    // Next Element Sibling 
+        let aLink = document.querySelector("h4").nextElementSibling.nextElementSibling.nextElementSibling
+        aLink = aLink.nextElementSibling
+        // console.log(aLink)
+
+    // Previous Element Sibling 
+        let h4 = document.querySelector(".add-to-cart").previousElementSibling.previousElementSibling
+        h4 = h4.previousElementSibling.previousElementSibling
+        // console.log(h4); 
+        let tr = document.querySelector("th").parentElement.firstElementChild.nextElementSibling
+        tr = tr.nextElementSibling.nextElementSibling.previousElementSibling.parentElement
+        // console.log(tr);
+
+    // Create a new element by Javascript 
+        let newLink1 = document.createElement("a")
+        // newLink.classList = "link"
+        newLink1.setAttribute("class", "link")
+        // newLink.id = "link"
+        newLink1.setAttribute("id","link1")
+        // newLink.innerHTML = "لینک جدید 1"
+        // newLink1.textContent = "لینک جدید 1"
+        newLink1.appendChild(document.createTextNode("لینک جدید 1"))
+        let primaryLinkLists = document.querySelector("#primary")
+        primaryLinkLists.appendChild(newLink1)
+        // console.log(newLink1);
+        let newLink2 = document.createElement("a")
+        newLink2.classList = "link"
+        newLink2.id = "link2" 
+        newLink2.appendChild(document.createTextNode("لینک جدید 2"))
+        let secondaryLinkLists = document.querySelector("#secondary")
+        secondaryLinkLists.appendChild(newLink2)
+        // console.log(newLink2);
+    
+    //Remove Element by Javascript
+        let coursesListJs = document.querySelectorAll("#courses-list > .row ")
+        // coursesListJs[0].remove()
+        // coursesListJs[1].remove()
+        // newLink1.remove()
+        // newLink2.remove()
+        // secondary.remove()
+        // primary.remove() 
+        // console.log(coursesListJs); 
         
-         
+    // Replace Element by Javascript
+        let h1Replace = document.createElement("h1")
+        // setting attributes
+        h1Replace.classList = "heading"
+        h1Replace.id = "headingReplace"
+        h1Replace.appendChild(document.createTextNode("جاوااسکریپت "))
+        // console.log(h1Replace); 
+
+        let coursesListReplace = document.querySelector("#courses-list")
+        // console.log(coursesListReplace);
+        let headingReplace = document.querySelector(".heading")
+        // console.log(headingReplace);
+        // Replacing Elements
+        coursesListReplace.replaceChild(h1Replace,headingReplace) 
+        
+        let h4Replace = document.createElement("h4")
+        h4Replace.id = "h4Replace"
+        h4Replace.classList.add("h4Replace")
+        h4Replace.appendChild(document.createTextNode("دوره مقدماتی جاوا اسکریپت"))
+        // console.log(h4Replace); 
+        
+        let infoCardReplace = document.querySelector(".info-card")
+        // console.log(infoCardReplace); 
+        let h4Text = document.querySelector(".info-card").firstElementChild
+        // console.log(h4Text);
+        infoCardReplace.replaceChild(h4Replace,h4Text)    
+
+    // classList
+        const linkAttr = document.querySelector('.link')
+        let linkClassList = linkAttr.classList
+        let LinkClassName = linkAttr.className
+        // adding classList
+        linkAttr.classList.add('new-class')
+        // removing classList
+        linkAttr.classList.remove('link')
+    // id
+        element = linkAttr.id
+        // adding Id
+        linkAttr.id = 'link'
+        // removing Id
+        linkAttr.id = ' '
+    // attribute  function
+        // getAttribute
+        element = linkAttr.getAttribute('class')
+        // setAttribute
+        element = linkAttr.setAttribute('id', 'newId')
+        // hasAttribute
+        element = linkAttr.hasAttribute('target')
+
+// Event Listeners
+      

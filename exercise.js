@@ -711,3 +711,82 @@
 
 // Event Listeners
       
+    // syntax
+        let clearCart = document.querySelector("#clear-cart") 
+        clearCart.addEventListener("click", clearCartClick)
+        function clearCartClick() {
+            // console.log("you clicked ClearCart Button !!!"); 
+        }
+        // console.log(clearCart);          
+        document.addEventListener("scroll",scroll)
+        function scroll() {
+            // console.log("you scrolled page , TNX!");  
+        } 
+    
+    // Event Parameter in EventListener
+        let mainBar = document.querySelector(".main-bar")
+        mainBar.addEventListener("click",mainBarClick) 
+        function mainBarClick(event) { 
+            console.log(event); 
+            // console.log(event.type);
+            // console.log(event.pageX);
+            // console.log(event.target);   
+            // event.target.outerText = "ok"  
+            // console.log(event.target.baseURI);
+            // console.log(event.target.localName);  
+            // console.log(event.target.nodeName);  
+        }
+    // Mouse Events
+    const clearCartBtn = document.querySelector('#clear-cart')
+        // click 
+        // clearCartBtn.addEventListener('click', printEvent )
+        // Double click 
+        // clearCartBtn.addEventListener('dblclick', printEvent )
+        // mouse enter
+        // clearCartBtn.addEventListener('mouseenter', printEvent )
+        // mouse leave
+        // clearCartBtn.addEventListener('mouseleave', printEvent )
+        // mouse over
+        // clearCartBtn.addEventListener('mouseover', printEvent )
+        // mouse out
+        // clearCartBtn.addEventListener('mouseout', printEvent )
+        // mouse up
+        // clearCartBtn.addEventListener('mouseup', printEvent )
+        // mouse down
+        // clearCartBtn.addEventListener('mousedown', printEvent )
+        // mouse move
+        // clearCartBtn.addEventListener('mousemove', printEvent )
+        function printEvent1(e){
+            console.log(e)
+            console.log(`THE EVENT IS: ${e.type}`)
+        }
+    // KeyBoard Events
+        let submitSearchCourse = document.querySelector("#search")
+        let searchCourse = document.querySelector("#search-course")
+        // submit for form
+        // submitSearchCourse.addEventListener("click",PrintEvent2)
+        // Key Press
+        // searchCourse.addEventListener("keypress",PrintEvent2)
+        // Key Down
+        // searchCourse.addEventListener("keydown",PrintEvent2)
+        // Key Up
+        // searchCourse.addEventListener("keyup",PrintEvent2)
+        // focus
+        // searchCourse.addEventListener('focus',PrintEvent2)
+        // Blur
+        // searchCourse.addEventListener("blur",PrintEvent2)
+        // copy
+        // searchCourse.addEventListener("copy",PrintEvent2)
+        // cut
+        // searchCourse.addEventListener("cut",PrintEvent2)
+        // paste
+        
+
+
+
+        function PrintEvent2(e) {
+            console.log(`The Event Type is = ${e.type}`);
+            console.log(e); 
+        }
+    
+           

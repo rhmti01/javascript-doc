@@ -77,15 +77,14 @@ ul {
 }
 .hero-content form .submit-search-course {
     position: absolute;
-    right:0;
-    top:0;
     height: 100%;
-    padding: 0;
-    display: block;
+    margin : 0;
+    margin-right: -20px; 
+    display: inline;
     text-indent: -9999px;
-    width: 49%;
+    width: 15px;
     background-image: url(../img/mglass.png);
-    background-position: left center;
+    background-position: center center;
     background-repeat: no-repeat;
     border:none;
 }

@@ -736,8 +736,9 @@
             // console.log(event.target.localName);  
             // console.log(event.target.nodeName);  
         }
+
     // Mouse Events
-    const clearCartBtn = document.querySelector('#clear-cart')
+        const clearCartBtn = document.querySelector('#clear-cart')
         // click 
         // clearCartBtn.addEventListener('click', printEvent )
         // Double click 
@@ -760,6 +761,7 @@
             console.log(e)
             console.log(`THE EVENT IS: ${e.type}`)
         }
+
     // KeyBoard Events
         let submitSearchCourse = document.querySelector("#search")
         let searchCourse = document.querySelector("#search-course")
@@ -772,7 +774,7 @@
         // Key Up
         // searchCourse.addEventListener("keyup",PrintEvent2)
         // focus
-        // searchCourse.addEventListener('focus',PrintEvent2)
+        // searchCourse.addEventListener('focus',PrintEvent2) 
         // Blur
         // searchCourse.addEventListener("blur",PrintEvent2)
         // copy
@@ -780,13 +782,117 @@
         // cut
         // searchCourse.addEventListener("cut",PrintEvent2)
         // paste
-        
-
-
-
+        // searchCourse.addEventListener("paste",PrintEvent2)
         function PrintEvent2(e) {
-            console.log(`The Event Type is = ${e.type}`);
-            console.log(e); 
+            // console.log(`The Event Type is = ${e.type}`);
+            // console.log(e); 
         }
+
+    // Event Bubbling 
+        let cardFirst = document.querySelector(".card")
+        let cardSecond = document.querySelector(".info-card")
+        let cardThird = document.querySelector("#add-to-card")  
+        cardFirst.addEventListener("click",function (e) {
+            e.preventDefault()
+            // console.log(`you clicked first card`);
+        })
+        cardSecond.addEventListener("click",function () {
+            // console.log(`you clicked second card`);
+        })
+        cardThird.addEventListener("click",function() {
+            // console.log(`you clicked third card`);
+        }) 
+        // The Solution is in below
+
+    // Propagation (first Solution)
+        const cardCard = document.querySelector('.card')
+        const infoCardCard = document.querySelector('.info-card')
+        const addToCartCard = document.querySelector('.add-to-cart')
+        cardCard.addEventListener('click', function(e){
+            e.preventDefault()
+            e.stopPropagation()
+            // console.log('you Click the card')
+        })
+        infoCardCard.addEventListener('click', function(e){
+            // console.log('you Click the infoCard')
+            e.stopPropagation()
+            e.preventDefault()
+        })
+        addToCartCard.addEventListener('click', function(e){
+            // console.log('you Click the addToCart')
+            e.stopPropagation()
+            e.preventDefault()
+        }) 
     
-           
+    // Delegation (second solution)
+        const coursesListDele = document.querySelector('#courses-list');
+        coursesListDele.addEventListener('click', function(e){
+            if(e.target.classList.contains('add-to-cart')){
+                console.log(e.target)
+            }
+        })
+    
+       const footerListsFor = document.querySelector("footer")
+       footerListsFor.addEventListener("click",function (e) {
+           if (e.target.classList.contains("link")) {
+               e.preventDefault()
+            //    console.log(e.target);
+           }
+       })
+
+// localStorage
+   
+    // setting in local Storage 
+        localStorage.setItem("Javascript","React")
+        localStorage.setItem("Python","Django")
+        localStorage.setItem("PHP","Laravel")
+        localStorage.setItem("Dart","Flutter")   
+        localStorage.setItem("Ruby","Ruby on Rails")
+        localStorage.setItem("CSS","Tailwind")
+
+    // getting item in local Storage
+        localStorage.getItem("Python")
+        localStorage.getItem("PHP")
+        localStorage.getItem("Ruby")
+        localStorage.getItem("CSS")
+        const JavascriptLS = localStorage.getItem("Javascript")
+        // console.log(JavascriptLS);
+        // console.log(localStorage.length);
+
+    // removing item in local Storage
+        localStorage.removeItem("Javascript")
+        localStorage.removeItem("CSS") 
+        localStorage.removeItem("Python")
+        localStorage.removeItem("Dart")
+        localStorage.removeItem("PHP") 
+        // Clearing all in LS
+        localStorage.clear()
+        
+    // Adding multiple items in value 
+        localStorage.setItem("JS",["React","Vue","Angular"])   // Not Advised
+        localStorage.removeItem("JS") 
+        // better way 
+        let myArray7 = ["React","Vue","Angular","React Native","NodeJS","ExpressJS"]
+        let myarray7Stringify = JSON.stringify(myArray7)
+        localStorage.setItem("JavascriptLocalS",myarray7Stringify)
+        let JavascriptLocalS = localStorage.getItem("JavascriptLocalS")
+        JavascriptLocalS = JSON.parse(JavascriptLocalS)
+        // console.log(JavascriptLocalS);
+        let programming_languages = ["Javascript","Python","Solidity","Swift","C#","Java"]
+        let myArray8 = JSON.stringify(programming_languages)
+        localStorage.setItem("PLLS",myArray8)
+        let PLLS = localStorage.getItem("PLLS")
+        PLLS = JSON.parse(PLLS)
+        // console.log(PLLS); 
+       
+        
+// OOP 
+
+    //
+
+
+
+
+
+    
+

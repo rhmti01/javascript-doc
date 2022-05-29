@@ -865,7 +865,7 @@ footerListsFor.addEventListener("click", function (e) {
 // localStorage
 
 // setting in local Storage 
-localStorage.setItem("Javascript", "React")
+localStorage.setItem("Javascript", "React", "reactNative")
 localStorage.setItem("Python", "Django")
 localStorage.setItem("PHP", "Laravel")
 localStorage.setItem("Dart", "Flutter")
@@ -905,6 +905,16 @@ let myArray8 = JSON.stringify(programming_languages)
 localStorage.setItem("PLLS", myArray8)
 let PLLS = localStorage.getItem("PLLS")
 PLLS = JSON.parse(PLLS)
+localStorage.removeItem("JavascriptLocalS")
+localStorage.removeItem("PLLS")
+
+let sampleObject = {
+    name: "abolfazl",
+    favorite: "javascript"
+}
+
+localStorage.setItem("test", JSON.stringify(sampleObject))
+
 // console.log(PLLS); 
 
 
@@ -1092,7 +1102,7 @@ class Constructor6 extends Constructor3 {
         return ` student : ${this.student} , lesson : ${this.lesson} , age : ${this.age} , average : ${this.average} , phone : ${this.phone} , weight : ${this.weight}  `
     }
 }
-let constructorP77 = new Constructor6("rhmti02", "math", 17, 19 , 09143333333 , 70)
+let constructorP77 = new Constructor6("rhmti02", "math", 17, 19, 09143333333, 70)
 // console.log(constructorP77);
 // console.log(constructorP77.result());
 constructorP77.Erfag(6);
@@ -1100,3 +1110,32 @@ constructorP77.KasrNomre(2);
 // console.log(constructorP77.average);
 
 
+// Ajax
+
+// first step 
+let lgMegajs = document.querySelector("#logo")
+let h2 = document.querySelector("#h2")
+let ptg = document.querySelector("#p")
+
+lgMegajs.addEventListener("click", function (e) {
+    e.preventDefault()
+    // second step
+    let xhr = new XMLHttpRequest()
+
+    // third step
+    xhr.open("GET", "sample.txt", true)
+
+    // fourth step
+    xhr.onload = function () {
+        if (this.status === 200 || this.readyState === 4) {
+            h2.innerHTML = `${this.responseText}`
+            ptg.innerHTML = `${this.responseText}`
+            console.log(this.status);
+            console.log(this.readyState);
+        }
+    }
+
+    // fifth step
+    xhr.send()
+
+})

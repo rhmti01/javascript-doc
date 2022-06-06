@@ -1139,3 +1139,51 @@ lgMegajs.addEventListener("click", function (e) {
     xhr.send()
 
 })
+
+
+// CallBack in Asynchronous 
+
+
+let futureAcc = ["Microsoft Surface Laptop 4", "Xiaomi POCO X3", "Mi Pods", "Mazda3"]
+
+
+function cartVisualShow() {
+    futureAcc.forEach(product => {
+        setTimeout(() => {
+            // console.log(product);
+        }, 2000);
+    });
+}
+
+function suggestion(sugg, callback) {
+    setTimeout(() => {
+        futureAcc.push(sugg)
+        callback()
+    }, 3000);
+}
+
+suggestion("Bussines", cartVisualShow)
+cartVisualShow()
+
+
+// Promise 
+
+
+let getDataApi = new Promise((resolve, reject) => {
+
+    let getDataCondition = true
+
+    if (getDataCondition) {
+        resolve("get data successfully...")
+    } else {
+        reject("not found!!!")
+    }
+
+})
+
+getDataApi.then((result) => {
+    console.log(result);
+}).catch((result) => {
+    console.log(result);
+})
+
